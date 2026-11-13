@@ -445,7 +445,7 @@ Esta seção está reservada para apresentar visualmente o funcionamento do proj
 
 ### Simulação
 
-docs/images/demonstracao.mp4
+[docs/images/demonstracao.mp4](https://github.com/user-attachments/assets/12980bb9-94b0-4a98-8a55-cdb929435e72)
 
 ---
 
