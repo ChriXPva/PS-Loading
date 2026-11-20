@@ -26,13 +26,14 @@
 
 // PARÂMETROS DO SISTEMA
 
-#define INTERVALO_AQUISICAO_MS 2500
+#define INTERVALO_AQUISICAO_MS 2000
 #define INTERVALO_DISPLAY_MS   2000
 #define TEMP_MIN_VALIDA        -40.0f
 #define TEMP_MAX_VALIDA        80.0f
 #define HISTERESE              1.0f
 #define TAMANHO_JANELA_MEDIA   5
 #define TAMANHO_HISTORICO      10
+#define LIMITE_FALHAS_CONSECUTIVAS 2
 
 #define BIT_REDE_PRONTA        (1 << 0)
 #define BIT_MQTT_PRONTO        (1 << 1)
@@ -74,7 +75,6 @@ extern QueueHandle_t     xFilaTelemetria;
 extern EventGroupHandle_t xEventosSistema;
 
 // PROTÓTIPOS DAS TASKS FREERTOS
-
 void TaskControleIO(void *pvParameters);
 void TaskSensores(void *pvParameters);
 void TaskRedeMQTT(void *pvParameters);

@@ -88,11 +88,11 @@ void TaskSensores(void *pvParameters) {
       falhasConsecutivasS2++;
     }
 
-    // Só entra em estado de falha se houver 3 ou mais falhas em sequência
-    bool s1ValidoSistema = (falhasConsecutivasS1 < 3) && validarLeitura(ultimaValidaS1);
-    bool s2ValidoSistema = (falhasConsecutivasS2 < 3) && validarLeitura(ultimaValidaS2);
+    // Só entra em estado de falha se atingir o limite de falhas consecutivas (2 ciclos)
+    bool s1ValidoSistema = (falhasConsecutivasS1 < LIMITE_FALHAS_CONSECUTIVAS) && validarLeitura(ultimaValidaS1);
+    bool s2ValidoSistema = (falhasConsecutivasS2 < LIMITE_FALHAS_CONSECUTIVAS) && validarLeitura(ultimaValidaS2);
 
-    // Em falhas transitórias (1 ou 2 ciclos), mantém a última temperatura válida
+    // Em falha transitória (1 ciclo), mantém a última temperatura válida
     float tempEfetivaS1 = s1Ok ? brutaS1 : (s1ValidoSistema ? ultimaValidaS1 : NAN);
     float tempEfetivaS2 = s2Ok ? brutaS2 : (s2ValidoSistema ? ultimaValidaS2 : NAN);
 

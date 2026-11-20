@@ -4,6 +4,8 @@ Sistema embarcado para monitoramento contínuo de temperatura, desenvolvido com 
 
 O projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor com foco em Sistemas Embarcados 2026.2 da **Loading Jr.**
 
+Ferramentas de IA como Antigravity e Gemini foram utilizadas para facilitar o desenvolvimento de código bruto e para implementação das funcionalidades opcionais o que me permitiu além de deixar o projeto mais robusto, também aprender sobre temas novos. Todos os resultados e funcionalidades foram testados e revisados por mim
+
 ---
 
 ## 📌 Sumário
@@ -86,9 +88,9 @@ O sistema possui três LEDs responsáveis por indicar visualmente seu estado ope
 
 | LED | Indicação |
 | --- | --- |
-| LED referente ao pino 2 | Funcionamento normal. |
-| LED referente ao pino 6 | Condição de alerta de temperatura. |
-| LED referente ao pino 5 | Condição de falha dos sensores. |
+| LED Verde | Funcionamento normal. |
+| LED Amarelo | Condição de alerta de temperatura. |
+| LED Vermelho | Condição de falha dos sensores. |
 
 ### 6. Comunicação MQTT
 
@@ -241,7 +243,7 @@ O projeto utiliza os seguintes componentes eletrônicos:
 | 2 sensores DHT | Aquisição redundante de temperatura. |
 | Display LCD I2C | Exibição local de informações. |
 | Potenciômetro | Ajuste local do limite de temperatura. |
-| 3 LEDs | Para indicar o funcionamento. |
+| 3 LEDs de cores diferentes | Para indicar o estado do funcionamento. |
 | Jumpers e conexões | Interligação dos componentes. |
 
 ---
@@ -403,7 +405,7 @@ A classificação dos estados permite identificar rapidamente a situação opera
 
 Ocorre quando as leituras estão válidas e a temperatura permanece abaixo do limite configurado.
 
-- LED do pino 2 acionado.
+- LED Verde acionado
 - Monitoramento em funcionamento.
 - Publicação das informações via MQTT.
 
@@ -411,7 +413,7 @@ Ocorre quando as leituras estão válidas e a temperatura permanece abaixo do li
 
 Ocorre quando a temperatura atinge ou ultrapassa o limite configurado.
 
-- LED do pino 6 acionado.
+- LED Amarelo acionado.
 - Condição de alerta identificada.
 - Atualização das informações disponibilizadas via MQTT.
 
@@ -421,7 +423,7 @@ Ocorre quando são identificadas mais de três falhas consecutivas nas leituras 
 
 Essa estratégia considera que os sensores podem apresentar falhas pontuais devido a ruídos e instabilidades momentâneas. Dessa forma, o sistema evita classificar uma ocorrência isolada como uma falha persistente.
 
-- LED do pino 5 acionado.
+- LED Vermelho acionado.
 - Condição de falha identificada.
 - Atualização do estado operacional via MQTT.
 
