@@ -2,7 +2,7 @@
 
 Sistema embarcado para monitoramento contínuo de temperatura, desenvolvido com ESP32-S3, utilizando sensores redundantes, comunicação MQTT e mecanismos de detecção de falhas. O projeto permite acompanhar as condições térmicas em tempo real, consultar históricos de medições e configurar limites de temperatura tanto remotamente quanto diretamente pelo hardware.
 
-O projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor com foco em Sistemas Embarcados 2026.2 da **Loading Jr.**
+O projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor com foco em Sistemas Embarcados 2026.2 da **Loading Jr.** Ferramentas de IA como Antigravity e Gemini foram utilizadas para facilitar o desenvolvimento de código bruto, para implementação das funcionalidades opcionais e para criação do README o que me permitiu, além de deixar o projeto mais robusto, também aprender sobre temas novos. Todos os resultados e funcionalidades foram testados e revisados por mim.
 
 Ferramentas de IA como Antigravity e Gemini foram utilizadas para facilitar o desenvolvimento de código bruto e para implementação das funcionalidades opcionais o que me permitiu além de deixar o projeto mais robusto, também aprender sobre temas novos. Todos os resultados e funcionalidades foram testados e revisados por mim
 
@@ -447,7 +447,7 @@ Esta seção está reservada para apresentar visualmente o funcionamento do proj
 
 ### Simulação
 
-docs/images/demonstracao.mp4
+[docs/images/demonstracao.mp4](https://github.com/user-attachments/assets/12980bb9-94b0-4a98-8a55-cdb929435e72)
 
 ---
 
